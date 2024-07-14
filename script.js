@@ -1,5 +1,9 @@
 const video = document.getElementById('video');
 
+Promise.all([
+    faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
+])
+
 function startVideo() {
     navigator.getUserMedia(
         { video: {} },
